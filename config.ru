@@ -1,2 +1,2 @@
 require "app"
-run CloudPrint::App
+run BoxyPrint::App

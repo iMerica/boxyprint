@@ -13,7 +13,7 @@ STRIPE_SECRET_KEY = config['stripe_secret_key']
 STRIPE_PUBLISHABLE_KEY = config['stripe_publishable_key']
 DB_URL = config['database_url']
 
-module CloudPrint
+module BoxyPrint
 
   class App < Sinatra::Base
 
@@ -25,8 +25,16 @@ module CloudPrint
     migration "create the orders table" do
       database.create_table :orders do
        primary_key :id
-
+       text        :email
+       text        :name
+       text        :phone
+       timestamp   :time
+       photo_urls  :text
       end
+    end
+
+    class Order < Sequel::Model
+
     end
 
     post '/' do
