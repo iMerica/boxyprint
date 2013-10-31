@@ -1,6 +1,6 @@
 require 'dropbox_sdk'
 require 'sinatra'
-require 'sequel'
+require 'sinatra/sequel'
 require 'stripe'
 
 # y so many constants?

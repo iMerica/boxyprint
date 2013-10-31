@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'dropbox-sdk'
 gem 'sinatra'
-gem 'sequel'
+gem 'sinatra-sequel'
 gem 'stripe'
+gem 'thin'
 
